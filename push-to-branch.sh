@@ -3,7 +3,7 @@
 newbranch=$1
 
 # Cek apakah branch ada
-if git branch --list | grep -q "^  $newbranch"; then
+if git branch --list | grep "$newbranch"; then
     echo "Branch '$newbranch' sudah ada."
     git checkout $newbranch
 else
