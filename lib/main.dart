@@ -20,45 +20,51 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Widget Column'),
         ),
-        body: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 100.0,
-              margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.amber,
+        body: Container(
+          color: Colors.grey,
+          //width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 100.0,
+                height: 100.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.amber,
+                ),
               ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 100.0,
-              margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.blue,
+              Container(
+                width: 100.0,
+                height: 100.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.blue,
+                ),
               ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 100.0,
-              margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.red,
+              Container(
+                width: 100.0,
+                height: 100.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.red,
+                ),
               ),
-            ),
-            Container(
-              width: double.infinity,
-              height: 100.0,
-              margin: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Colors.teal,
+              Container(
+                width: 100.0,
+                height: 100.0,
+                margin: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.teal,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
