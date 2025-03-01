@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           //height: double.infinity,
           //
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
