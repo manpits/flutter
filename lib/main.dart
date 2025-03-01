@@ -15,16 +15,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white60,
+        brightness: Brightness.dark,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My App'),
         ),
-        body: Container(
-          width: double.infinity,
-          height: double.infinity,
-          color: Colors.amber,
-          child: Center(child: Text('Widget Container')),
+        body: Center(
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            margin: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(30.0),
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Text(
+                'Widget Container\n- height & width : full\n- margin : 30.0\n- padding : 10.0'),
+          ),
         ),
       ),
     );
