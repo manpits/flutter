@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           height: double.infinity,
           child: Image.asset(
             'assets/images/bg.jpg',
-            fit: BoxFit.cover,
+            //fit: BoxFit.cover,
           ),
         ),
       ),
