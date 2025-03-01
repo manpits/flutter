@@ -18,10 +18,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
-        /**
-         * Widget ListTile memiliki property 'leading', 'title' dan 'trailing' yang bisa diguakan untuk menampilkan widget lain
-         * method 'onTap' dapat digunakan untuk menangkap event yang terjadi ketika ListTile di tap pada layar
-         * */
         appBar: AppBar(
           title: const Text('Widget Stack'),
           leading: const Icon(Icons.person_2_outlined),
@@ -29,7 +25,7 @@ class MyApp extends StatelessWidget {
             Icon(Icons.light_mode),
           ],
         ),
-        body: Column(
+        body: const Column(
           children: [
             Row(
               children: [
@@ -42,6 +38,11 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
+
+            /**
+             * Widget Wrap dapat digunakan untuk melakukan wrapping jika tampilan widget secara horizontal
+             * melewati ukuran lebar layar sehingga tidak terjadi overflow
+             * */
             Wrap(
               children: [
                 Text('Children dari widget Column ini '),
