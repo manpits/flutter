@@ -18,9 +18,27 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Widget Column'),
+          title: Text('Widget Image'),
         ),
-        body: Image.asset('assets/images/bg.jpg'),
+        /**
+         * download gambar dari internet, misalnya 'bg.jpg'
+         * simpan gambar 'bg.jpg' ke folder 'assets/image'
+         * edit 'pubspec.yaml' , tambahkan
+         *  flutter:
+         *    ...
+         *    assets:
+         *      - assets/images/
+         * 
+         *  Wrap widget Image dengan widget Container untuk melihat cara kerja property 'fit'
+         */
+        body: Container(
+          color: Colors.white30,
+          height: double.infinity,
+          child: Image.asset(
+            'assets/images/bg.jpg',
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
