@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Column
+Widget Image
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
