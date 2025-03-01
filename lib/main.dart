@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Container
+Widget Column
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -15,27 +15,50 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white60,
-        brightness: Brightness.dark,
-      ),
+      theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My App'),
+          title: Text('Widget Column'),
         ),
-        body: Center(
-          child: Container(
-            height: double.infinity,
-            width: double.infinity,
-            margin: EdgeInsets.all(10.0),
-            padding: EdgeInsets.all(30.0),
-            decoration: BoxDecoration(
-              color: Colors.teal,
-              borderRadius: BorderRadius.circular(20.0),
+        body: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.amber,
+              ),
             ),
-            child: Text(
-                'Widget Container\n- height & width : full\n- margin : 30.0\n- padding : 10.0'),
-          ),
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.blue,
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.red,
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.teal,
+              ),
+            ),
+          ],
         ),
       ),
     );
