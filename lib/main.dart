@@ -1,8 +1,9 @@
 /* --------------------------------------------
-Widget Icon
+Widget ListTile
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,9 +28,14 @@ class MyApp extends StatelessWidget {
             Icon(Icons.light_mode),
           ],
         ),
-        body: Image.asset(
-          'assets/images/bg.jpg',
-          fit: BoxFit.cover,
+        body: ListTile(
+          tileColor: Colors.red,
+          leading: Icon(Icons.accessibility),
+          title: Text('List Tile 1'),
+          trailing: Text('Trailing Text'),
+          onTap: () {
+            print('ListTile is tapped !');
+          },
         ),
       ),
     );
