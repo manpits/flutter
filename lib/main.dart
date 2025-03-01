@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         /**
-         *
+         * Widget ListTile memiliki property 'leading', 'title' dan 'trailing' yang bisa diguakan untuk menampilkan widget lain
+         * method 'onTap' dapat digunakan untuk menangkap event yang terjadi ketika ListTile di tap pada layar
          * */
         appBar: AppBar(
           title: const Text('Widget Stack'),
