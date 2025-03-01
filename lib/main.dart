@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
           // Aktifkan property width: double.infinity untuk melihat cara kerja
           // property 'crossAxisAlignment'
           // -----------------------------------------------------------------
-          //width: double.infinity,
+          //height: double.infinity,
           //
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
                 width: 100.0,
@@ -48,24 +48,6 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.blue,
-                ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                margin: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.red,
-                ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                margin: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.teal,
                 ),
               ),
             ],
