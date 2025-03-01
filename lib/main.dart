@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget ListTile
+Widget Wrap
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -29,14 +29,28 @@ class MyApp extends StatelessWidget {
             Icon(Icons.light_mode),
           ],
         ),
-        body: ListTile(
-          tileColor: Colors.red,
-          leading: Icon(Icons.accessibility),
-          title: Text('List Tile 1'),
-          trailing: Text('Trailing Text'),
-          onTap: () {
-            print('ListTile is tapped !');
-          },
+        body: Column(
+          children: [
+            Row(
+              children: [
+                Text('Children dari widget Column ini '),
+                Text('menggunakan widget Row, '),
+                Text(
+                    'jika tulisannya terlalu panjang maka akan terjadi overflow '),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Wrap(
+              children: [
+                Text('Children dari widget Column ini '),
+                Text('menggunakan widget Wrap, '),
+                Text(
+                    'jika tulisannya terlalu panjang maka tidak terjadi overflow namun akan diwrap ke bawah'),
+              ],
+            ),
+          ],
         ),
       ),
     );
