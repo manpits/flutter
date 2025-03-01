@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Tipe data dalam bahasa pemrograman Dart
+Widget MAterialApp
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -8,44 +8,31 @@ void main() {
   runApp(const MyApp());
 }
 
-// Beberapa jenis tipe data bahasa pemrograman DART
-String name = "Pemrograman Mobile dengan Flutter";
-int bulat = 10;
-double desimal = 99.3;
-bool kondisi = false;
-List array = ["Satu", "Dua", "Tiga"];
-
-Map<String, String> mapStringToString = {
-  "Satu": "One",
-  "Dua": "Two",
-  "Tiga": "Three",
-};
-
-Map<String, int> mapStringToInteger = {
-  "Satu": 1,
-  "Dua": 2,
-  "Tiga": 3,
-};
-
-Map<String, dynamic> mapStringToDynamic = {
-  "Satu": "One",
-  "Dua": 2,
-  "Tiga": 3.0,
-};
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // MaterialApp bisa menggunakan ColorScheme
+    final myColorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.red,
+      brightness: Brightness.dark,
+    );
+
     return MaterialApp(
-      //Debug banner diset false
       debugShowCheckedModeBanner: false,
+
+      // Set penggunaan ColorScheme pada property 'theme'
+      theme: ThemeData(
+        colorScheme: myColorScheme.copyWith(
+          surface: myColorScheme.onPrimary,
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('My App'),
         ),
-        body: Text(name),
+        body: const Text('Pemrograman Flutter'),
       ),
     );
   }
