@@ -23,9 +23,15 @@ class MyApp extends StatelessWidget {
         /**
          * Umumnya sebuah widget memiliki child, namun jika widget tidak memiliki child, kita bisa menambahkan
          * widget Stack, untuk menampilkan widget diatasnya
+         * 
          * Sebagai contoh, widget Image tidak memiliki child, sehingga kita bisa menggunakan widget Stack untuk
          * menampilkan widget Text diatasnya
+         * 
          * Tambahkan widget Container untuk mengatur posisi tampilan widget Text diatas widget Image
+         * 
+         * Selain widget Container, kita juga buisa menggunakan widget SizedBox untuk menampilkan widget Text diatas widget Image
+         * 
+         * Penggunaan widget SizedBox lebih efisien dibanding COntainer, jika yang kita perlukan hanya property widh dan height
          */
         body: Stack(children: [
           Image.asset(
@@ -56,19 +62,6 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 300,
-            child: Center(
-              child: Text(
-                'Sized Box !',
-                style: TextStyle(
-                  fontSize: 40.0,
-                  fontWeight: FontWeight.normal,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          )
         ]),
       ),
     );
