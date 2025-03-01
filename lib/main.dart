@@ -35,12 +35,38 @@ class MyApp extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 50.0,
-            color: Colors.teal,
+            //color: Colors.teal,
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('This text is stacked over image !'),
               ],
+            ),
+          ),
+          const SizedBox(
+            height: 300,
+            child: Center(
+              child: Text(
+                'Sized Box !',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 300,
+            child: Center(
+              child: Text(
+                'Sized Box !',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white,
+                ),
+              ),
             ),
           )
         ]),
