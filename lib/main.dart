@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget MAterialApp
+Widget MaterialApp
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -13,26 +13,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // MaterialApp bisa menggunakan ColorScheme
-    final myColorScheme = ColorScheme.fromSeed(
-      seedColor: Colors.red,
-      brightness: Brightness.dark,
-    );
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
       // Set penggunaan ColorScheme pada property 'theme',
       theme: ThemeData(
-        colorScheme: myColorScheme.copyWith(
-          surface: myColorScheme.onPrimary,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.teal,
+          brightness: Brightness.dark,
         ),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My App'),
+          backgroundColor: Colors.teal,
+          title: const Text('Theme pada MaterialApp'),
         ),
-        body: const Text('Pemrograman Flutter'),
+        body: const Text('Framework User Interface - Flutter'),
       ),
     );
   }
