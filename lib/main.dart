@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      // Set penggunaan ColorScheme pada property 'theme'
+      // Set penggunaan ColorScheme pada property 'theme',
       theme: ThemeData(
         colorScheme: myColorScheme.copyWith(
           surface: myColorScheme.onPrimary,
