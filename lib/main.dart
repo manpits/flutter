@@ -22,7 +22,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.grey,
+          // -----------------------------------------------------------------
+          // Aktifkan property width: double.infinity untuk melihat cara kerja
+          // property 'crossAxisAlignment'
+          // -----------------------------------------------------------------
           //width: double.infinity,
+          //
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
