@@ -40,6 +40,9 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.amber,
                 ),
+                child: Center(
+                  child: Text('Container 1'),
+                ),
               ),
               Container(
                 width: 100.0,
@@ -48,6 +51,9 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.blue,
+                ),
+                child: Center(
+                  child: Text('Container 2'),
                 ),
               ),
             ],
