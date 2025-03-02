@@ -54,10 +54,15 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               /**
-               * Widget expanded digunakan untuk mengisi secara penuh ruang kosong pada sebuah widget Column atau Row
+               * Widget Divider digunakan untuk membuat garis secara horizontal
                */
-              const Expanded(
-                child: SizedBox(),
+              Divider(
+                color: Colors.red,
+              ),
+              Expanded(
+                child: VerticalDivider(
+                  color: Colors.amber,
+                ),
               ),
               Container(
                 width: 100.0,
