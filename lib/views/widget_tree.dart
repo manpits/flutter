@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_003_empty/views/data/notifiers.dart';
 import 'package:flutter_003_empty/views/pages/homepage.dart';
 import 'package:flutter_003_empty/views/pages/profilepage.dart';
+import 'package:flutter_003_empty/views/widgets/navbarwidget.dart';
 
 List<Widget> pages = const [
   Homepage(),
@@ -13,11 +14,17 @@ class WidgetTree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: selectedPageNotifier,
-      builder: (context, value, child) {
-        return pages.elementAt(value);
-      },
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Value Notifier'),
+      ),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, value, child) {
+          return pages.elementAt(value);
+        },
+      ),
+      bottomNavigationBar: const NavbarWidget(),
     );
   }
 }

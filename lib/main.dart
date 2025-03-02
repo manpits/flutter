@@ -5,7 +5,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_003_empty/views/widget_tree.dart';
-import 'package:flutter_003_empty/views/widgets/navbarwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,13 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Value Notifier'),
-        ),
-        body: const WidgetTree(),
-        bottomNavigationBar: const NavbarWidget(),
-      ),
+      home: const WidgetTree(),
     );
   }
 }
