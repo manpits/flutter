@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Widget Drawer'),
@@ -90,6 +90,9 @@ class MyApp extends StatelessWidget {
               )
             ],
           ),
+        ),
+        body: const Center(
+          child: Text('Membuat sidebar menu dengan widget Drawer'),
         ),
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
