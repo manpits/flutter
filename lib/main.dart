@@ -21,19 +21,19 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My App'),
+          title: const Text('Widget Container'),
         ),
         body: Center(
           child: Container(
             height: double.infinity,
             width: double.infinity,
-            margin: EdgeInsets.all(10.0),
-            padding: EdgeInsets.all(30.0),
+            margin: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(30.0),
             decoration: BoxDecoration(
               color: Colors.teal,
               borderRadius: BorderRadius.circular(20.0),
             ),
-            child: Text(
+            child: const Text(
                 'Widget Container\n- height & width : full\n- margin : 30.0\n- padding : 10.0'),
           ),
         ),
