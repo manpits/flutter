@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My App'),
+          title: const Text('Disable Debug Banner'),
         ),
-        body: const Text('My first app'),
+        body: const Text('debugShowCheckedModeBanner : false'),
       ),
     );
   }
