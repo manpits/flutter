@@ -1,11 +1,11 @@
 /* --------------------------------------------
-* Widget Tree
+* Value Notifier
 * digunakan untuk mengelola aplikasi dengan beberapa halaman
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
 import 'package:flutter_003_empty/views/widget_tree.dart';
-import 'package:flutter_003_empty/widgets/navbarwidget.dart';
+import 'package:flutter_003_empty/views/widgets/navbarwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Tree'),
+          title: const Text('Value Notifier'),
         ),
         body: const WidgetTree(),
         bottomNavigationBar: const NavbarWidget(),
