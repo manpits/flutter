@@ -9,7 +9,7 @@ void main() {
 }
 
 // Beberapa jenis tipe data bahasa pemrograman DART
-String name = "Pemrograman Mobile dengan Flutter";
+String name = "Pemrograman Mobile dengan Framework UI Flutter";
 int bulat = 10;
 double desimal = 99.3;
 bool kondisi = false;
