@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Widget Image'),
+          title: const Text('Widget Image'),
         ),
         /**
          * download gambar dari internet, misalnya 'bg.jpg'
