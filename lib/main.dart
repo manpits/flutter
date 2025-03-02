@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('My App'),
+          title: const Text('Tipe Data Dart'),
         ),
         body: Text(name),
       ),
