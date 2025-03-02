@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Column
+Widget Row
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Widget Column'),
+          title: const Text('Widget Row'),
         ),
         body: Container(
           color: Colors.grey,
@@ -35,24 +35,24 @@ class MyApp extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.amber,
                 ),
-                child: Center(
+                child: const Center(
                   child: Text('Container 1'),
                 ),
               ),
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.blue,
                 ),
-                child: Center(
+                child: const Center(
                   child: Text('Container 2'),
                 ),
               ),
