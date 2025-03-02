@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         /**
-         *
+         * Widget Icon
          * */
         appBar: AppBar(
-          title: const Text('Widget Stack'),
+          title: const Text('Widget Icon'),
           leading: const Icon(Icons.person_2_outlined),
           actions: const [
             Icon(Icons.light_mode),
