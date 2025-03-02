@@ -52,18 +52,18 @@ class MyApp extends StatelessWidget {
               Column(
                 children: [
                   ListTile(
-                    leading: Icon(Icons.home),
-                    title: Text('Home'),
+                    leading: const Icon(Icons.home),
+                    title: const Text('Home'),
                     onTap: () {},
                   ),
                   ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text('Profile'),
+                    leading: const Icon(Icons.person),
+                    title: const Text('Profile'),
                     onTap: () {},
                   ),
                   ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text('Pengaturan'),
+                    leading: const Icon(Icons.settings),
+                    title: const Text('Pengaturan'),
                     onTap: () {},
                   ),
                 ],
@@ -73,9 +73,17 @@ class MyApp extends StatelessWidget {
               ),
               Column(
                 children: [
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Divider(
+                      color: Colors.black12,
+                      height: 5,
+                      thickness: 1.0,
+                    ),
+                  ),
                   ListTile(
-                    leading: Icon(Icons.logout),
-                    title: Text('Logout'),
+                    leading: const Icon(Icons.logout),
+                    title: const Text('Logout'),
                     onTap: () {},
                   ),
                 ],
