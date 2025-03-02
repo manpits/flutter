@@ -7,3 +7,6 @@ import 'package:flutter/material.dart';
 
 // default nilai selectedPageNotifier = 0 atau index ke 0 (HomePage)
 ValueNotifier selectedPageNotifier = ValueNotifier(0);
+
+// nila selectedThemeNotifier = false menunjukkan mode Malam/Gelap
+ValueNotifier selectedThemeNotifier = ValueNotifier(false);
