@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
          * method 'onTap' dapat digunakan untuk menangkap event yang terjadi ketika ListTile di tap pada layar
          * */
         appBar: AppBar(
-          title: const Text('Widget Stack'),
+          title: const Text('Widget ListTile'),
           leading: const Icon(Icons.person_2_outlined),
           actions: const [
             Icon(Icons.light_mode),
@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
         ),
         body: ListTile(
           tileColor: Colors.red,
-          leading: Icon(Icons.accessibility),
-          title: Text('List Tile 1'),
-          trailing: Text('Trailing Text'),
+          leading: const Icon(Icons.accessibility),
+          title: const Text('List Tile 1'),
+          trailing: const Text('Trailing Text'),
           onTap: () {
             print('ListTile is tapped !');
           },
