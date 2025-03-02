@@ -12,6 +12,7 @@ void main() {
   runApp(const MyApp());
 }
 
+/// Gunakan StatefulWidget jika ingin membuat halaman dapat direfresh
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
@@ -20,6 +21,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  /// variabel 'currentIndex' untuk menyimpan index dari BottomNavigationBar yang aktif saat ini
+  /// variabel 'bodyTitle' untuk menyimpan string dari Scaffold > body > text
   int currentIndex = 0;
   String bodyTitle = "Home";
 
@@ -33,12 +36,30 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Widget Stateful'),
         ),
         body: Center(
+          /**
+           * agar tulisan di Scaffold>body>text dinamis, title dari widget Text diambil dari variable 'bodyTitle'
+           */
           child: Text(bodyTitle),
         ),
         bottomNavigationBar: NavigationBar(
+          /**
+           * set property 'selectedIndex' dengan nilai pada variable 'currentIndex'
+           */
           selectedIndex: currentIndex,
+
+          /**
+           * gunakan method 'onDestinationSelected' untuk menghandle perubahan pada 'bottomNavigationBar'
+           */
           onDestinationSelected: (value) {
+            /**
+             * gunakan method setState() untuk merefresh layar
+             * value = nilai index dari element 'bottomNavigationBar' yang ditap
+             */
             setState(() {
+              /**
+               * ubah nilai variable 'currentIndex' dengan nilai index element 'bottomNavigationBar' saat ini
+               * dicek, jika index saat ini = 0, berarti yang ditap adalah Home
+               */
               currentIndex = value;
               if (currentIndex == 0) {
                 bodyTitle = "Home";
