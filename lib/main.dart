@@ -1,22 +1,19 @@
 /* --------------------------------------------
-Split Widget
+* Split Widget
+* Agar pada saat pemanggilan method setstate() , tidak keseluruhan layar direfresh
+* namun hanya bagian yang merupakan widget StatefullWidget saja 
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
+import 'package:flutter_003_empty/widgets/navbarwidget.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+// Ubah menjadi StatelessWidget
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,27 +24,18 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Split Widget'),
         ),
-        body: Center(
-          child: Text('Index saat ini : $currentIndex'),
+        body: const Center(
+          child: Text(''),
         ),
-        bottomNavigationBar: NavigationBar(
-          selectedIndex: currentIndex,
-          onDestinationSelected: (value) {
-            setState(() {
-              currentIndex = value;
-            });
-          },
-          destinations: const [
-            NavigationDestination(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-          ],
-        ),
+        /**
+         * 
+         *  Buat folder 'lib/widgets'
+         *  Buatlah sebuah file di 'lib/widgets/navbarwidget.dart'
+         *  Buatlah StatefillWidget pada file 'lib/widgets/navbarwidget.dart'
+         *  Split widget NavigationBar kedalam file tersebut
+         * 
+         */
+        bottomNavigationBar: const NavbarWidget(),
       ),
     );
   }
