@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Drawer
+Widget SafeArea
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -18,81 +18,62 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Drawer'),
+          title: const Text('Widget SafeArea'),
         ),
         /**
-         * Pada widget Scaffold dapat ditambahkan property 'drawer' dengan widget 'Drawer' untuk menempatkan semacam sidebar menu
-         * Tambahkan widget Column sebagai child dari widget Drawer
-         * Tambahkan widget DrawerHeader sebagai salah satu child dari widget Column
-         * Tambahkan widget Expanded agar memenuhi ruang kosong dari widget Column
+         * Widget 'Drawer' kita dapat wrap dengan widget SafeArea
+         * Widget SafeArea akan membuat widget yang kita buat tampilannya tidak melebihi bagian atas atau bagian bawah layar
+         * Untuk melihat pengaruh widget SafeArea, coba jalankan aplikasi pada emulator Android atau ioS atau langsung pada perangkat mobile
          */
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(
-                child: Column(
+        drawer: SafeArea(
+          child: Drawer(
+            child: Column(
+              children: [
+                Column(
                   children: [
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/images/bg.jpg',
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                    ListTile(
+                      leading: const Icon(Icons.home),
+                      title: const Text('Home'),
+                      onTap: () {},
                     ),
-                    const Text('Menu Utama'),
+                    ListTile(
+                      leading: const Icon(Icons.person),
+                      title: const Text('Profile'),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      leading: const Icon(Icons.settings),
+                      title: const Text('Pengaturan'),
+                      onTap: () {},
+                    ),
                   ],
                 ),
-              ),
-              Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(Icons.home),
-                    title: const Text('Home'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.person),
-                    title: const Text('Profile'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.settings),
-                    title: const Text('Pengaturan'),
-                    onTap: () {},
-                  ),
-                ],
-              ),
-              const Expanded(
-                child: SizedBox(),
-              ),
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Divider(
-                      color: Colors.grey[0],
-                      height: 5,
-                      thickness: 0.5,
+                const Expanded(
+                  child: SizedBox(),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Divider(
+                        color: Colors.grey[0],
+                        height: 5,
+                        thickness: 0.5,
+                      ),
                     ),
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.logout),
-                    title: const Text('Logout'),
-                    onTap: () {},
-                  ),
-                ],
-              )
-            ],
+                    ListTile(
+                      leading: const Icon(Icons.logout),
+                      title: const Text('Logout'),
+                      onTap: () {},
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
         body: const Center(
-          child: Text('Membuat sidebar menu dengan widget Drawer'),
+          child: Text('Widget SafeArea'),
         ),
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
