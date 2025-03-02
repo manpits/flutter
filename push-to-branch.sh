@@ -13,5 +13,5 @@ fi
 
 git add .
 timestamp=$(date +%s)
-git commit -m "$newbranchping-$timestamp"
+git commit -m "$newbranch-$timestamp"
 git push origin $newbranch
