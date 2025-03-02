@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget MaterialApp
+Theme pada MaterialApp
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           title: const Text('Theme pada MaterialApp'),
         ),
-        body: const Text('Framework User Interface - Flutter'),
+        body: const Text('Gunakan ThemeData > ColorScheme'),
       ),
     );
   }
