@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Navigation Bar
+Widget FloatingActionButton
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -18,14 +18,37 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget NavigationBar'),
+          title: const Text('Widget FloatingActionButton'),
         ),
         /**
-         * Pada widget Scaffold dapat ditambahkan property 'bottomNavigationBar'
-         * property 'destinations' berupa list yang MINIMAL/HARUS memiliki paling tidak 2 (dua) element
-         * property 'selectedIndex' digunakan untuk menentukan elemen mana yang sedang aktif
-         * method 'onDestinationSelected' digunakan untuk menangkap event index dari element yang ditap 
+         * Pada widget Scaffold dapat ditambahkan property 'floatingActionButton'
+         * 
          */
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                print('FloatingActionButton + is clicked !');
+              },
+              child: Icon(
+                Icons.add,
+              ),
+            ),
+            SizedBox(
+              height: 2.0,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                print('FloatingActionButton - is clicked !');
+              },
+              child: Icon(
+                Icons.remove,
+              ),
+            ),
+          ],
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: const [
             NavigationDestination(
