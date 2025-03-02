@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_003_empty/views/data/notifiers.dart';
 import 'package:flutter_003_empty/views/pages/homepage.dart';
 import 'package:flutter_003_empty/views/pages/profilepage.dart';
 
@@ -12,6 +13,11 @@ class WidgetTree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return pages.elementAt(0);
+    return ValueListenableBuilder(
+      valueListenable: selectedPageNotifier,
+      builder: (context, value, child) {
+        return pages.elementAt(value);
+      },
+    );
   }
 }
