@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Widget Column'),
+          title: const Text('Widget Column'),
         ),
         body: Container(
           color: Colors.grey,
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.amber,
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.blue,
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.red,
@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
               Container(
                 width: 100.0,
                 height: 100.0,
-                margin: EdgeInsets.all(10.0),
+                margin: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.teal,
