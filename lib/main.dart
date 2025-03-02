@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData(brightness: Brightness.light),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Widget Drawer'),
@@ -73,12 +73,12 @@ class MyApp extends StatelessWidget {
               ),
               Column(
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Divider(
-                      color: Colors.black12,
+                      color: Colors.grey[0],
                       height: 5,
-                      thickness: 1.0,
+                      thickness: 0.5,
                     ),
                   ),
                   ListTile(
