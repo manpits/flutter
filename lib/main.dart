@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Wrap
+Widget Navigation Bar
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -18,39 +18,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Wrap'),
-          leading: const Icon(Icons.person_2_outlined),
-          actions: const [
-            Icon(Icons.light_mode),
-          ],
+          title: const Text('Widget NavigationBar'),
         ),
-        body: const Column(
-          children: [
-            Row(
-              children: [
-                Text('Children dari widget Column ini '),
-                Text('menggunakan widget Row, '),
-                Text(
-                    'jika tulisannya terlalu panjang maka akan terjadi overflow '),
-              ],
+        /**
+         * Pada widget Scaffold dapat ditambahkan property 'bottomNavigationBar'
+         * property 'destinations' berupa list yang MINIMAL/HARUS memiliki paling tidak 2 (dua) element
+         * property 'selectedIndex' digunakan untuk menentukan elemen mana yang sedang aktif
+         * method 'onDestinationSelected' digunakan untuk menangkap event index dari element yang ditap 
+         */
+        bottomNavigationBar: NavigationBar(
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.home),
+              label: 'Home',
             ),
-            SizedBox(
-              height: 20,
-            ),
-
-            /**
-             * Widget Wrap dapat digunakan untuk melakukan wrapping jika tampilan widget secara horizontal
-             * melewati ukuran lebar layar sehingga tidak terjadi overflow
-             * */
-            Wrap(
-              children: [
-                Text('Children dari widget Column ini '),
-                Text('menggunakan widget Wrap, '),
-                Text(
-                    'jika tulisannya terlalu panjang maka tidak terjadi overflow namun akan diwrap ke bawah'),
-              ],
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: 'Profile',
             ),
           ],
+          selectedIndex: 1,
+          onDestinationSelected: (value) {
+            print(value);
+          },
         ),
       ),
     );
