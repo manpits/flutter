@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Column'),
+          title: const Text('Widget Expanded'),
         ),
         body: Container(
           color: Colors.grey,
