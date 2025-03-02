@@ -1,5 +1,5 @@
 /* --------------------------------------------
-Widget Expanded
+Widget Divider dan VerticalDivider
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Column'),
+          title: const Text('Widget Divider dan VerticalDivider'),
         ),
         body: Container(
           color: Colors.grey,
@@ -55,11 +55,13 @@ class MyApp extends StatelessWidget {
               ),
               /**
                * Widget Divider digunakan untuk membuat garis secara horizontal
+               * Widget VerticalDivider digunakan untuk membuat garis secara vertical
+               * Gunakan widget Expanded pada VerticalDivider untuk mengisi seluruh ruang kosong yang tersedia
                */
-              Divider(
+              const Divider(
                 color: Colors.red,
               ),
-              Expanded(
+              const Expanded(
                 child: VerticalDivider(
                   color: Colors.amber,
                 ),
