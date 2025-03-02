@@ -22,6 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         /**
          * Pada widget Scaffold dapat ditambahkan property 'drawer' dengan widget 'Drawer' untuk menempatkan semacam sidebar menu
+         * Tambahkan widget Column sebagai child dari widget Drawer
+         * Tambahkan widget DrawerHeader sebagai salah satu child dari widget Column
+         * Tambahkan widget Expanded agar memenuhi ruang kosong dari widget Column
          */
         drawer: Drawer(
           child: Column(
