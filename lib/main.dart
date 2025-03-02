@@ -64,6 +64,18 @@ class MyApp extends StatelessWidget {
                     onTap: () {},
                   ),
                 ],
+              ),
+              const Expanded(
+                child: SizedBox(),
+              ),
+              Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.logout),
+                    title: Text('Logout'),
+                    onTap: () {},
+                  ),
+                ],
               )
             ],
           ),
