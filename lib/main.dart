@@ -22,9 +22,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   /// variabel 'currentIndex' untuk menyimpan index dari BottomNavigationBar yang aktif saat ini
-  /// variabel 'bodyTitle' untuk menyimpan string dari Scaffold > body > text
   int currentIndex = 0;
-  String bodyTitle = "Home";
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +35,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           /**
-           * agar tulisan di Scaffold>body>text dinamis, title dari widget Text diambil dari variable 'bodyTitle'
+           * agar tulisan di Scaffold>body>text dinamis, title dari widget Text diambil dari variable 'currentIndex'
            */
-          child: Text(bodyTitle),
+          child: Text('Index saat ini : $currentIndex'),
         ),
         bottomNavigationBar: NavigationBar(
           /**
@@ -53,7 +51,6 @@ class _MyAppState extends State<MyApp> {
           onDestinationSelected: (value) {
             /**
              * gunakan method setState() untuk merefresh layar
-             * value = nilai index dari element 'bottomNavigationBar' yang ditap
              */
             setState(() {
               /**
@@ -61,11 +58,6 @@ class _MyAppState extends State<MyApp> {
                * dicek, jika index saat ini = 0, berarti yang ditap adalah Home
                */
               currentIndex = value;
-              if (currentIndex == 0) {
-                bodyTitle = "Home";
-              } else {
-                bodyTitle = "Profile";
-              }
             });
           },
           destinations: const [
