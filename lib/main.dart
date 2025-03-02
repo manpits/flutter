@@ -22,28 +22,29 @@ class MyApp extends StatelessWidget {
         ),
         /**
          * Pada widget Scaffold dapat ditambahkan property 'floatingActionButton'
-         * 
+         * method 'onPressed' digunakan untuk menangkap event tap pada widget FloatingActionButton
+         * wrap widget 'FloatingActionButton' dengan widget 'Column' untuk membuat lebih dari 1 elemen 'FloatingActionButton'
+         * set property 'mainAxisSize:MainAxisSize.min' untuk mengatur agar ukuran Column hanya seukuran widget didalamnya
          */
         floatingActionButton: Column(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             FloatingActionButton(
               onPressed: () {
                 print('FloatingActionButton + is clicked !');
               },
-              child: Icon(
+              child: const Icon(
                 Icons.add,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 2.0,
             ),
             FloatingActionButton(
               onPressed: () {
                 print('FloatingActionButton - is clicked !');
               },
-              child: Icon(
+              child: const Icon(
                 Icons.remove,
               ),
             ),
