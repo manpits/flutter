@@ -22,15 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.grey,
-          // -----------------------------------------------------------------
-          // Aktifkan property width: double.infinity untuk melihat cara kerja
-          // property 'crossAxisAlignment'
-          // -----------------------------------------------------------------
-          //width: double.infinity,
-          //
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 width: 100.0,
@@ -58,6 +52,12 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                   color: Colors.red,
                 ),
+              ),
+              /**
+               * Widget expanded digunakan untuk mengisi secara penuh ruang kosong pada sebuah widget Column atau Row
+               */
+              const Expanded(
+                child: SizedBox(),
               ),
               Container(
                 width: 100.0,
