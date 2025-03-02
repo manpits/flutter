@@ -3,7 +3,6 @@ Widget Wrap
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Widget Stack'),
+          title: const Text('Widget Wrap'),
           leading: const Icon(Icons.person_2_outlined),
           actions: const [
             Icon(Icons.light_mode),
