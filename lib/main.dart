@@ -1,10 +1,10 @@
 /* --------------------------------------------
-* Split Widget
-* Agar pada saat pemanggilan method setstate() , tidak keseluruhan layar direfresh
-* namun hanya bagian yang merupakan widget StatefullWidget saja 
+* Widget Tree
+* digunakan untuk mengelola aplikasi dengan beberapa halaman
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
+import 'package:flutter_003_empty/views/widget_tree.dart';
 import 'package:flutter_003_empty/widgets/navbarwidget.dart';
 
 void main() {
@@ -22,19 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Split Widget'),
+          title: const Text('Widget Tree'),
         ),
-        body: const Center(
-          child: Text(''),
-        ),
-        /**
-         * 
-         *  Buat folder 'lib/widgets'
-         *  Buatlah sebuah file di 'lib/widgets/navbarwidget.dart'
-         *  Buatlah StatefillWidget pada file 'lib/widgets/navbarwidget.dart'
-         *  Split widget NavigationBar kedalam file tersebut
-         * 
-         */
+        body: const WidgetTree(),
         bottomNavigationBar: const NavbarWidget(),
       ),
     );
