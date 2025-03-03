@@ -1,5 +1,5 @@
 /* --------------------------------------------
-* Textfiled Widget
+* Checkbox Widget
 -----------------------------------------------*/
 
 import 'package:flutter/material.dart';
