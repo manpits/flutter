@@ -13,6 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
   bool isSwithed = false;
   double sliderValue = 0.0;
   String onTapImage = 'Coba tap / double-tap / zoom gambar diatas !';
+  int dropdownValue = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -180,6 +181,74 @@ class _ProfilePageState extends State<ProfilePage> {
                   onTapImage = 'Anda melakukan tap pada widget Inkwell !';
                 });
               },
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+              child: const Text('Elevated Button'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {},
+              style: FilledButton.styleFrom(
+                backgroundColor: Colors.deepPurple,
+              ),
+              child: const Text('Filled Button'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.red[50],
+              ),
+              child: const Text('Text Button'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            OutlinedButton(
+              onPressed: () {},
+              style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.blue[100],
+              ),
+              child: const Text('Outline Button'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            DropdownButton(
+              // property 'value' SEBAIKNYA lebih dulu di deklarasikan
+              items: const [
+                DropdownMenuItem(
+                  // property 'value' HARUS lebih dulu di deklarasikan
+                  value: 0,
+                  child: Text('Menu 1'),
+                ),
+                DropdownMenuItem(
+                  value: 1,
+                  child: Text('Menu 2'),
+                ),
+                DropdownMenuItem(
+                  value: 2,
+                  child: Text('Menu 3'),
+                ),
+              ],
+              onChanged: (value) {
+                setState(() {
+                  dropdownValue = value!;
+                });
+              },
+              value: dropdownValue,
             )
           ],
         ),
