@@ -100,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
-          Slider(
+          Slider.adaptive(
             value: sliderValue,
             //max: 100.0,
             //divisions: 20,
