@@ -85,7 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
-          // .adaptive method
+          // .adaptive method,
           SwitchListTile.adaptive(
             value: isSwithed,
             title: const Text('Switch Listtile'),
