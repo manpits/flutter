@@ -37,10 +37,8 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           Row(
             children: [
-              /**
-               * Checkbox widget
-               */
-              Checkbox(
+              // .adaptive method
+              Checkbox.adaptive(
                 value: isChecked,
                 //tristate: true,
                 onChanged: (bool? value) {
@@ -55,7 +53,8 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
-          CheckboxListTile(
+          // .adaptive method
+          CheckboxListTile.adaptive(
             value: isChecked,
             //tristate: true,
             onChanged: (bool? value) {
@@ -71,7 +70,8 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           Row(
             children: [
-              Switch(
+              // .adaptive method
+              Switch.adaptive(
                 value: isSwithed,
                 onChanged: (value) {
                   setState(() {
@@ -85,7 +85,8 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
-          SwitchListTile(
+          // .adaptive method
+          SwitchListTile.adaptive(
             value: isSwithed,
             title: const Text('Switch Listtile'),
             tileColor: Colors.blue,
