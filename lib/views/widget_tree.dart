@@ -19,7 +19,7 @@ class WidgetTree extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-            title: value ? const Text('Mode Malam') : const Text('Mode Siang'),
+            title: const Text('Widget Textfield'),
             actions: [
               IconButton(
                   onPressed: () {
