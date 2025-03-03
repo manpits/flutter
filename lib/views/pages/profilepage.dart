@@ -144,6 +144,19 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 5,
             ),
             Text(onTapImage),
+            const SizedBox(
+              height: 5,
+            ),
+            InkWell(
+              splashColor: Colors.red,
+              child: Ink(
+                height: 100,
+                color: Colors.amber,
+              ),
+              onTap: () {
+                print('Container is tapped !');
+              },
+            )
           ],
         ),
       ),
