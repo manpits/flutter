@@ -12,6 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
   bool? isChecked = false;
   bool isSwithed = false;
   double sliderValue = 0.0;
+  String onTapImage = 'Coba tap / double-tap / zoom gambar diatas !';
 
   @override
   Widget build(BuildContext context) {
@@ -121,15 +122,28 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/bg.jpg'),
+            GestureDetector(
+              child: Image.asset('assets/images/bg.jpg'),
+              onTap: () {
+                setState(() {
+                  onTapImage = 'Anda melakukan tap pada gambar !';
+                });
+              },
+              onDoubleTap: () {
+                setState(() {
+                  onTapImage = 'Anda melakukan double-tap pada gambar !';
+                });
+              },
+              onScaleStart: (details) {
+                setState(() {
+                  onTapImage = 'Anda melakukan zoom pada gambar !';
+                });
+              },
+            ),
             const SizedBox(
               height: 5,
             ),
-            Image.asset('assets/images/bg.jpg'),
-            const SizedBox(
-              height: 5,
-            ),
-            Image.asset('assets/images/bg.jpg'),
+            Text(onTapImage),
           ],
         ),
       ),

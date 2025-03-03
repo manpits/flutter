@@ -19,7 +19,7 @@ class WidgetTree extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('SinglechildScrollView'),
+            title: const Text('GestureDetector Widget'),
             actions: [
               IconButton(
                   onPressed: () {
