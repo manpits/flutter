@@ -122,6 +122,12 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(
               height: 5,
             ),
+            /**
+             * Untuk mendapatkan efek Inkwell pada gambar kita bisa menempatkan widget Image dan widget InkWell pada sebuah Stack
+             * karena InkWell tidak bisa menggambar efek tinta di atas widget non-Material seperti Image, maka
+             * Tambahkan Material sebagai parent dari InkWell, karena efek ripple hanya bisa muncul di dalam Material widget
+             * Jangan lupa set color dari widget Material transparent agar tidak menutupi widget Image
+             */
             Stack(
               children: [
                 Image.asset(
@@ -160,6 +166,9 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(
               height: 5,
             ),
+            /**
+             * Untuk membuat efek ripple ketika widget di tap dengan widget Inkwell
+             */
             InkWell(
               splashColor: Colors.red,
               child: Ink(
