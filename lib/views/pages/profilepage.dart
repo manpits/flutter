@@ -122,23 +122,27 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(
               height: 5,
             ),
-            GestureDetector(
-              child: Image.asset('assets/images/bg.jpg'),
-              onTap: () {
-                setState(() {
-                  onTapImage = 'Anda melakukan tap pada gambar !';
-                });
-              },
-              onDoubleTap: () {
-                setState(() {
-                  onTapImage = 'Anda melakukan double-tap pada gambar !';
-                });
-              },
-              onScaleStart: (details) {
-                setState(() {
-                  onTapImage = 'Anda melakukan zoom pada gambar !';
-                });
-              },
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/bg.jpg',
+                  height: 200,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    splashColor: Colors.blueAccent[50],
+                    onTap: () {
+                      print('tapped');
+                    },
+                    child: Ink(
+                      height: 200,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(
               height: 5,
