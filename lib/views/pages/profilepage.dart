@@ -11,6 +11,7 @@ class _ProfilePageState extends State<ProfilePage> {
   TextEditingController textController = TextEditingController();
   bool? isChecked = false;
   bool isSwithed = false;
+  double sliderValue = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +96,24 @@ class _ProfilePageState extends State<ProfilePage> {
                 isSwithed = value;
               });
             },
-          )
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Slider(
+            value: sliderValue,
+            //max: 100.0,
+            //divisions: 20,
+            onChanged: (value) {
+              setState(() {
+                sliderValue = value;
+              });
+            },
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text('Nilai : $sliderValue'),
         ],
       ),
     );
