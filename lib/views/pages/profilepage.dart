@@ -100,6 +100,10 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
+          /**
+           * Slider widget
+           * Coba isikan property : max dan divisions
+           */
           Slider(
             value: sliderValue,
             //max: 100.0,
