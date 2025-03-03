@@ -37,9 +37,6 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           Row(
             children: [
-              /**
-               * Checkbox widget
-               */
               Checkbox(
                 value: isChecked,
                 //tristate: true,
@@ -71,6 +68,9 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           Row(
             children: [
+              /**
+               * Switch widget
+               */
               Switch(
                 value: isSwithed,
                 onChanged: (value) {
@@ -85,6 +85,9 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 5,
           ),
+          /**
+          * SwitchListTile widget
+          */
           SwitchListTile(
             value: isSwithed,
             title: const Text('Switch Listtile'),
