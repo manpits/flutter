@@ -135,7 +135,16 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: InkWell(
                     splashColor: Colors.blueAccent[50],
                     onTap: () {
-                      print('tapped');
+                      setState(() {
+                        onTapImage =
+                            'Anda baru saja melakukan tap pada gambar !';
+                      });
+                    },
+                    onDoubleTap: () {
+                      setState(() {
+                        onTapImage =
+                            'Anda baru saja melakukan double tap pada gambar !';
+                      });
                     },
                     child: Ink(
                       height: 200,
@@ -158,7 +167,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.amber,
               ),
               onTap: () {
-                print('Container is tapped !');
+                setState(() {
+                  onTapImage = 'Anda melakukan tap pada widget Inkwell !';
+                });
               },
             )
           ],
