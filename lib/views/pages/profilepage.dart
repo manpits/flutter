@@ -79,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   });
                 },
               ),
-              const Text('Swith'),
+              const Text('Switch'),
             ],
           ),
           const SizedBox(
