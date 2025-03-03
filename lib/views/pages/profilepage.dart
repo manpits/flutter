@@ -10,6 +10,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   TextEditingController textController = TextEditingController();
   bool? isChecked = false;
+  bool isSwithed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +66,35 @@ class _ProfilePageState extends State<ProfilePage> {
             title: const Text('Checkbox Listtile'),
             tileColor: Colors.red,
           ),
+          const SizedBox(
+            height: 5,
+          ),
+          Row(
+            children: [
+              Switch(
+                value: isSwithed,
+                onChanged: (value) {
+                  setState(() {
+                    isSwithed = value;
+                  });
+                },
+              ),
+              const Text('Swith'),
+            ],
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          SwitchListTile(
+            value: isSwithed,
+            title: const Text('Switch Listtile'),
+            tileColor: Colors.blue,
+            onChanged: (value) {
+              setState(() {
+                isSwithed = value;
+              });
+            },
+          )
         ],
       ),
     );
