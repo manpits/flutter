@@ -26,7 +26,7 @@ class _ProfilePageState extends State<ProfilePage> {
               setState(() {});
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text('Teks : ${textController.text}'),
