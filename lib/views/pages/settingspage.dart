@@ -20,6 +20,11 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
+
+        /**
+         * automaticallyImplyLeading digunakan untuk menampilkan ikon navigasi back/kembali
+         */
+        //automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -30,6 +35,21 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              OutlinedButton(
+                onPressed: () {
+                  /**
+                   * Navigator.pop(context) untuk menutup page yang dibuka dengan .push
+                   */
+                  Navigator.pop(context);
+                },
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.blue[100],
+                ),
+                child: const Text('Kembali'),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
               TextField(
                 controller: textController,
                 decoration: const InputDecoration(
