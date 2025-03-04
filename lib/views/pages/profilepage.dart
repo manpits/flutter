@@ -13,7 +13,7 @@ class _ProfilePageState extends State<ProfilePage> {
   bool isSwithed = false;
   double sliderValue = 0.0;
   String onTapImage = 'Coba tap / double-tap / zoom gambar diatas !';
-  int dropdownValue = 0;
+  int? dropdownValue;
 
   @override
   Widget build(BuildContext context) {
@@ -243,9 +243,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Text('Menu 3'),
                 ),
               ],
-              onChanged: (value) {
+              onChanged: (int? value) {
                 setState(() {
-                  dropdownValue = value!;
+                  dropdownValue = value;
                 });
               },
               value: dropdownValue,
