@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_003_empty/views/data/notifiers.dart';
 import 'package:flutter_003_empty/views/pages/homepage.dart';
 import 'package:flutter_003_empty/views/pages/profilepage.dart';
+import 'package:flutter_003_empty/views/pages/settingspage.dart';
 import 'package:flutter_003_empty/views/widgets/navbarwidget.dart';
 
 List<Widget> pages = const [
@@ -19,13 +20,30 @@ class WidgetTree extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Button Widget'),
+            title: const Text('Navigation - Push - MaterialPageRoute'),
             actions: [
               IconButton(
-                  onPressed: () {
-                    selectedThemeNotifier.value = !selectedThemeNotifier.value;
-                  },
-                  icon: Icon(value ? Icons.light_mode : Icons.dark_mode))
+                onPressed: () {
+                  selectedThemeNotifier.value = !selectedThemeNotifier.value;
+                },
+                icon: Icon(value ? Icons.light_mode : Icons.dark_mode),
+              ),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        /*
+                        * widget SettingsPage HARUS me-return widget Scaffold !
+                        */
+                        return SettingsPage();
+                      },
+                    ),
+                  );
+                },
+                icon: Icon(Icons.settings),
+              ),
             ],
           ),
           body: ValueListenableBuilder(
