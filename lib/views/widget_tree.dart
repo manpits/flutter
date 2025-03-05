@@ -20,7 +20,7 @@ class WidgetTree extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Navigation - Push - MaterialPageRoute'),
+            title: const Text('Navigation - Push Replacement'),
             actions: [
               IconButton(
                 onPressed: () {
@@ -30,7 +30,11 @@ class WidgetTree extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  Navigator.push(
+                  /**
+                   * pushReplacement akan menimpa / menghapus page yang aktif saat ini dengan page yang baru
+                   * Biasanya digunakan ketika pindah dari halaman login ke halaman utama atau sebaliknya ketika logout
+                   */
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) {

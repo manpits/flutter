@@ -35,19 +35,22 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              OutlinedButton(
-                onPressed: () {
-                  /**
-                   * Navigator.pop(context) untuk menutup page yang dibuka dengan .push
-                   * Pastikan bahwa page yang aktif saat ini memiliki page yang aktif sebelumnya
-                   */
-                  Navigator.pop(context);
-                },
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.blue[100],
-                ),
-                child: const Text('Kembali'),
-              ),
+              /**
+               * Karena menggunakan Push Replacement, makan BackButton tidak diperlukan lagi
+               */
+              // OutlinedButton(
+              //   onPressed: () {
+              //     /**
+              //      * Navigator.pop(context) untuk menutup page yang dibuka dengan .push
+              //      * Pastikan bahwa page yang aktif saat ini memiliki page yang aktif sebelumnya
+              //      */
+              //     Navigator.pop(context);
+              //   },
+              //   style: OutlinedButton.styleFrom(
+              //     backgroundColor: Colors.blue[100],
+              //   ),
+              //   child: const Text('Kembali'),
+              // ),
               const SizedBox(
                 height: 5,
               ),
