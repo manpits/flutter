@@ -39,6 +39,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 onPressed: () {
                   /**
                    * Navigator.pop(context) untuk menutup page yang dibuka dengan .push
+                   * Pastikan bahwa page yang aktif saat ini memiliki page yang aktif sebelumnya
                    */
                   Navigator.pop(context);
                 },
